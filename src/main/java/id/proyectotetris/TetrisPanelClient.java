@@ -18,6 +18,7 @@ public class TetrisPanelClient extends javax.swing.JPanel {
     /**
      * Creates new form TetrisPanel
      */
+    public static final String SERVERIP ="127.0.0.1";
     private int clienteID;
     public GameTetris g1;
     TCPClient50 mTcpClient;
@@ -380,7 +381,7 @@ public class TetrisPanelClient extends javax.swing.JPanel {
 
                 @Override
                 public void run() {
-                    mTcpClient = new TCPClient50("127.0.0.1",///////////////////////////////
+                    mTcpClient = new TCPClient50(SERVERIP,///////////////////////////////
                         new TCPClient50.OnMessageReceived(){
                             @Override
                             public void messageReceived(Object message){
